@@ -1,1 +1,30 @@
-<h1>Body Component in html file<h1>
+<div class="row">
+  <div class="col">
+    <h1>*ngif</h1>
+    <hr />
+
+    <div *ngIf="show" class="card" style="width: 100%">
+      <div class="card-body">
+        <h5>{{ phrase.author }}</h5>
+        <p class="card-text">{{ phrase.text }}</p>
+      </div>
+    </div>
+
+    <button
+      href="#"
+      class="btn btn-outline-primary btn-block"
+      (click)="show = !show"
+      >Go somewhere</button
+    >
+  </div>
+
+  <div class="col">
+    <h1>*ngFor</h1>
+    <hr />
+
+    <ul class="list-group">
+      <li  *ngFor="let c of characters" class="list-group-item">{{c}}</li>
+
+    </ul>
+  </div>
+</div>
