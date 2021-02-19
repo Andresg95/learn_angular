@@ -1,0 +1,25 @@
+<h1>Heroes <small>of DC and Marvel universe</small></h1>
+<hr />
+
+<div class="card-columns" style="margin-top: 30px">
+  <div class="col"  *ngFor="let hero of heroes">
+    <div class="card animated fadeIn fast" style="width: 18rem">
+      <img
+        src={{hero.img}}
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{hero.nombre}}</h5>
+        <p class="card-text">
+          {{hero.bio}}
+        </p>
+        <p class="card-text">
+          {{hero.casa}}
+          <small class="text-muted">{{hero.aparicion}}</small>
+        </p>
+        <a href="#" class="btn btn-primary">I want to know more!</a>
+      </div>
+    </div>
+  </div>
+</div>
