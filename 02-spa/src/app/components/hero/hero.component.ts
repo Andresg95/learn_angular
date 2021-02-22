@@ -10,14 +10,13 @@ import { Hero, HeroesService } from '../../services/heroes.service';
 })
 export class HeroComponent {
 
-  hero: any = {};
+  hero: Hero;
 
   constructor(private activatedRoute: ActivatedRoute,
     private heroService: HeroesService) {
 
     this.activatedRoute.params.subscribe(params => {
         this.hero = this.heroService.getHero(params["id"])
-        console.log(this.hero, "ok...")
     })
   }
 
