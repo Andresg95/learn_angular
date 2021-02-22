@@ -59,10 +59,35 @@ export class HeroesService {
 
   }
 
-
   getHeroes():Hero[]{
     return this.heroes;
   }
+
+  getHero(idx: string):Hero{
+    return this.heroes[idx]
+  }
+
+  getSearchHeroes(term: string):Hero[]{
+
+    let heroesArr:Hero[] = []
+    term = term.toLowerCase();
+
+
+
+    for(let index = 0; index < this.heroes.length; index++){
+
+      let hero= this.heroes[index];
+      let name = hero.nombre.toLowerCase();
+
+      if(name.indexOf( term) >= 0 ){
+        hero.idx = index;
+        heroesArr.push(hero)
+      }
+    }
+
+     return heroesArr;
+  }
+
 }
 
 
@@ -71,5 +96,6 @@ export interface Hero{
   bio: string,
   img: string,
   aparicion: string,
-  casa: string
+  casa: string,
+  idx?: number
 }

@@ -1,0 +1,31 @@
+<div class="col" >
+  <div class="card animated fadeIn fast" style="width: 18rem">
+    <img src="{{ hero.img }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ hero.nombre }}</h5>
+      <p class="card-text">
+        {{ hero.bio }}
+      </p>
+      <p class="card-text">
+        {{ hero.casa }}
+        <small class="text-muted">{{ hero.aparicion }}</small>
+      </p>
+
+      <button
+        (click)="goToHero()"
+        type="button"
+        class="btn btn-outline-primary btn-block"
+      >
+        Ver ficha
+      </button>
+      <br />
+      <!--    <a
+        [routerLink]="['/hero', idx]"
+        routerLinkActive="router-link-active"
+        href="#"
+        class="btn btn-primary"
+        >I want to know more!</a
+      > -->
+    </div>
+  </div>
+</div>

@@ -4,6 +4,10 @@
   margin-top: 20px;
 }
 
+.logo-company{
+  width: 150px;
+}
+
 .active{
   font-weight: bold
 }

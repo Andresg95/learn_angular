@@ -43,15 +43,16 @@
         </li>
       </ul>
 
-      <form class="d-flex">
+      <div class="d-flex">
         <input
           class="form-control me-2"
           type="search"
           placeholder="Search"
           aria-label="Search"
+          (keyup.enter)="searchHero(searchText.value)" #searchText
         />
-        <button class="btn btn-outline-primary" type="submit">Search</button>
-      </form>
+        <button (click)="searchHero(searchText.value)" class="btn btn-outline-primary" type="button">Search</button>
+      </div>
     </div>
   </div>
 </nav>
